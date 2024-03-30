@@ -109,7 +109,12 @@ addCtt.addEventListener("click", function () {
         var imagemSucesso = document.createElement("img");
         imagemSucesso.style.opacity = "1";
         imagemSucesso.src = "image\\iconesMenu\\marca-de-verificacao.png";
-        imagemSucesso.style.width = "40%";
+        if (screenWidth <= 768) {
+            imagemSucesso.style.width = "20%";
+        }
+        else {
+            imagemSucesso.style.width = "40%";
+        }
 
         var novoContato = new Contato(nome, numero, email);
 
@@ -250,7 +255,12 @@ attCtt.addEventListener("click", function () {
                         mensagemSucesso.textContent = "Contato atualizado!"
                         var imagemSucesso = document.createElement("img");
                         imagemSucesso.src = "image\\iconesMenu\\marca-de-verificacao.png";
-                        imagemSucesso.style.width = "40%";
+                        if (screenWidth <= 768) {
+                            imagemSucesso.style.width = "20%";
+                        }
+                        else {
+                            imagemSucesso.style.width = "40%";
+                        }
                         if (nomeNovo.length > 0 && numeroNovo.length > 0) {
                             listaContatos[indice].nome = nomeNovo;
                             listaContatos[indice].numero = numeroNovo;
@@ -503,7 +513,7 @@ ligar.addEventListener("click", function () {
         alert("Número não digitado!");
         return;
     }
-    var wpp = "https://wa.me/".concat(numero);
+    var wpp = "https://wa.me/55".concat(numero);
     window.location.href = wpp;
 })
 
