@@ -206,6 +206,7 @@ input {
     }
     .Teclado {
         margin-bottom: 0;
+        height: calc(80% - 60px);
     }
 
     .botao {
