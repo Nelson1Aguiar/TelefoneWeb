@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #13131F;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: "Anton", sans-serif;
+    color: #517aa6;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input {
+    border: none;
+    outline: none;
+    margin-top: 10%;
+    width: 70%;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #c2c4c6;
+}
+
+.Teclado p {
+    font-size: 50px;
+    height: 50px;
+}
+
+.Teclado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: calc(80% - 50px);
+    flex-direction: column;
+    gap: 5%;
+}
+
+.botao {
+    display: flex;
+    gap: 3%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao button {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.botao img {
+    width: 20%;
+}
+
+.ligar {
+    background-color: rgb(21, 186, 21) !important;
+}
+
+.apagar {
+    background-color: red !important;
+}
+
+.Menu {
+    width: 20%;
+    background-color: #1c1c2d;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.opcoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.Menu button {
+    border: none;
+    outline: none;
+    width: 35%;
+    padding: 2%;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color:#c2c4c6;
+    transition: transform 0.5s;
+    font-size: 16px;
+}
+
+.Menu button:hover {
+    background-image: linear-gradient(90deg, rgb(136, 52, 254), rgb(14, 117, 117));
+    transform: scale(1.2);
+}
+
+.NovoMenu {
+    width: 20%;
+    background-color: #1c1c2d;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: white;
+}
+
+.NovoMenu button {
+    border: none;
+    outline: none;
+    width: 35%;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #c2c4c6;
+}
+
+.ElementosCriarCtt {
+    width: 100%;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ElementosCriarCtt button {
+    margin-top: 10%;
+    border: none;
+    outline: none;
+    width: 35%;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #c2c4c6;
+}
+
+.Contatos {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    margin-top: 10%;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.Contatos:hover {
+    transform: scale(1.1);
+}
+@media screen and (max-width: 768px) {
+    input {
+        width: 80%;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: #c2c4c6;
+    }
+    .Teclado {
+        margin-bottom: 0;
+    }
+
+    .botao {
+        gap: 5%;
+    }
+
+    .Menu h1 {
+        display: none;
+    }
+
+    .Menu {
+        width: 100%;
+        height: 20%;
+        bottom: 0;
+        flex-direction: row;
+    }
+
+    .Menu button {
+        width: 50%;
+        padding: 5px 0;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        color: #c2c4c6;
+    }
+
+    .NovoMenu {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .NovoMenu button {
+        width: 50%;
+        padding: 5px 0;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        color: #0e0101;
+    }
+    
+    .ElementosCriarCtt {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .ElementosCriarCtt button {
+        border: none;
+        outline: none;
+        width: 35%;
+        padding: 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        background-color: #c2c4c6;
+    }
+
+    .opcoes button img {
+        width: 30%;
+    }
+
+    .opcoes {
+        gap: 5%;
+    }
+
+    .opcoes p {
+        font-size: 100%;
+    }
+    .BotaoVoltar{
+        width: 20%;
+    }
+}
