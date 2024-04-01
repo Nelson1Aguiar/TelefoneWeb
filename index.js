@@ -21,7 +21,6 @@ const apagarCtt = document.getElementById("apagarCtt");
 const attCtt = document.getElementById("attCtt");
 const screenWidth = window.innerWidth;
 const teclado = document.getElementById("Teclado");
-const containerSite = document.getElementById("container");
 
 class Contato {
     constructor(nome, numero, email, id) {
@@ -62,8 +61,6 @@ addCtt.addEventListener("click", function () {
 
     var AdicionarContatos = document.createElement("div");
     AdicionarContatos.classList.add("NovoMenu");
-
-    containerSite.style.background="#1c1c2d";
 
     var divContainerInput = document.createElement("div");
     divContainerInput.style.display = "flex";
@@ -129,8 +126,8 @@ addCtt.addEventListener("click", function () {
                 setTimeout(function () {
                     mensagemSucesso.style.transition = "opacity 2s";
                     mensagemSucesso.style.opacity = "0";
-                    imagemSucesso.style.transition = "opacity 2s";
-                    imagemSucesso.style.opacity = "0";
+                    imagemSucesso.style.transition = "opacity 2s"; // Corrigido o nome da variável
+                    imagemSucesso.style.opacity = "0"; // Corrigido o nome da variável
                 }, 1000);
                 setTimeout(function () {
                     mensagemSucesso.remove();
@@ -161,14 +158,11 @@ addCtt.addEventListener("click", function () {
     voltar.addEventListener("click", function () {
         AdicionarContatos.remove();
         menu.style.display = "flex";
-        containerSite.style.background="#13131F";
     });
 })
 
 attCtt.addEventListener("click", function () {
     menu.style.display = "none";
-
-    containerSite.style.background="#1c1c2d";
 
     var Lista = document.createElement("div");
     Lista.classList.add("NovoMenu");
@@ -254,7 +248,6 @@ attCtt.addEventListener("click", function () {
                     salvarNovoContato.textContent = "Salvar";
 
                     salvarNovoContato.addEventListener("click", function () {
-                        containerSite.style.background="#1c1c2d";
                         var nomeNovo = criarNome.value;
                         var numeroNovo = criarNumero.value;
                         var emailNovo = criarEmail.value;
@@ -303,7 +296,6 @@ attCtt.addEventListener("click", function () {
                     voltar.addEventListener("click", function () {
                         AdicionarContatos.remove();
                         menu.style.display = "flex";
-                        containerSite.style.background="#13131F";
                     });
                 });
             }
@@ -312,7 +304,6 @@ attCtt.addEventListener("click", function () {
     voltar.addEventListener("click", function () {
         Lista.remove();
         menu.style.display = "flex";
-        containerSite.style.background="#13131F";
     });
     Busca();
     pesquisar.addEventListener("input", Busca);
@@ -320,7 +311,6 @@ attCtt.addEventListener("click", function () {
 
 ListarCtt.addEventListener("click", function () {
     menu.style.display = "none";
-    containerSite.style.background="#1c1c2d";
 
     var Lista = document.createElement("div");
     Lista.classList.add("NovoMenu");
@@ -369,13 +359,11 @@ ListarCtt.addEventListener("click", function () {
     voltar.addEventListener("click", function () {
         Lista.remove();
         menu.style.display = "flex";
-        containerSite.style.background="#13131F";
     });
 });
 
 apagarCtt.addEventListener("click", function () {
     menu.style.display = "none";
-    containerSite.style.background="#1c1c2d";
 
     var Lista = document.createElement("div");
     Lista.classList.add("NovoMenu");
@@ -447,7 +435,6 @@ apagarCtt.addEventListener("click", function () {
     voltar.addEventListener("click", function () {
         Lista.remove();
         menu.style.display = "flex";
-        containerSite.style.background="#13131F";
     });
     Busca();
     pesquisar.addEventListener("input", Busca);
@@ -529,3 +516,4 @@ ligar.addEventListener("click", function () {
     var wpp = "https://wa.me/55".concat(numero);
     window.location.href = wpp;
 })
+
