@@ -46,7 +46,7 @@ input {
     width: 70%;
     border-radius: 20px;
     padding: 10px;
-    background-color: #c2c4c6;
+    background-color: #e5e8eb;
 }
 
 .Teclado p {
@@ -281,6 +281,7 @@ input {
 
     .opcoes button img {
         width: 30%;
+        filter: invert(100%);
     }
 
     .opcoes {
